@@ -4,8 +4,6 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/dbdf911f904247b58c1d4a5928b3b809)](https://www.codacy.com/manual/7Hoki/13water?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=7Hoki/13water&amp;utm_campaign=Badge_Grade)
 
-[(https://camo.githubusercontent.com/f79813a1c69dbfead2e99ce351e34d8c0b21a8a5/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c616e67756167652d68746d6c2532466373732532466a73253246707974686f6e2d6f72616e6765)]
-
 ## 运行环境
 各种浏览器
 
