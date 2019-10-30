@@ -1,13 +1,13 @@
 # 13water
 
-# 代码质量评分
+## 代码质量评分
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/dbdf911f904247b58c1d4a5928b3b809)](https://www.codacy.com/manual/7Hoki/13water?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=7Hoki/13water&amp;utm_campaign=Badge_Grade)
 
-# 运行环境
+## 运行环境
 各种浏览器
 
-# 使用方法
+## 使用方法
 输入用户名和密码，点击登录后进入游戏主界面
 点击“Enter”，进入游戏
 游戏界面出现得到的牌和出牌结果，点击返回可“返回”游戏主界面
