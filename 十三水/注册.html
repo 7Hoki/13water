@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册</title>
+	</head>
+	<style>
+		*{
+			margin:0; padding 0;
+		}
+		body{
+			background: #B8CADB;			
+		}
+		#nothing{
+			width: 100%;
+			height: 110px;
+		}
+		#page{
+			text-align: center;
+			background-image:url(../image/背景图/开始背景.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 60%;
+			height: 420px;
+		}
+		.btn2{
+			width: 100%;
+			height: 60px;
+			text-align: center;
+			color: #606263;
+		}
+		.userInp{
+			width: 160px;
+			height: 25px;
+		}
+	</style>
+	<body>
+		<div id = "nothing"></div>
+		<div id = "page">
+			<div style="height:100px"></div>
+			<div class = "btn2" >
+				用户名：
+				<input id="user1" class="userInp" type="text" placeholder="请输入用户名"/>
+			</div>
+			<div class = "btn2" >
+				密码：&nbsp;&nbsp;&nbsp;&nbsp;
+				<input id="word1" class="userInp" type="password" placeholder="请输入密码"/>
+			</div>
+			<div class = "btn2" >
+				学号：&nbsp;&nbsp;&nbsp;&nbsp;
+				<input id="user2" class="userInp" type="text" placeholder="请输入教务处账号"/>
+			</div>
+			<div class = "btn2" >
+				密码：&nbsp;&nbsp;&nbsp;&nbsp;
+				<input id="word2" class="userInp" type="password" placeholder="请输入教务处密码"/>
+			</div>
+			<div class = "btn2" >
+				<input type="button" value="立即注册" onclick=(t1())> <!--onclick用来和js联系--> 
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var username=document.getElementById("user1");
+		var password=document.getElementById("word1");
+		function t1()
+		{
+			var data = JSON.stringify({
+				"username": username.value,
+				"password": password.value,
+				"student_number": document.getElementById("user2").value,
+				"student_password" :document.getElementById("word2").value
+			});
+			if (username.value == "" ||password.value == "" )
+			{
+				alert("请输入用户名或密码");
+				return ;
+			}
+			if(document.getElementById("user2").value==""||document.getElementById("word2").value=="")
+			{
+				alert("请输入教务处账号或密码");
+				return ;
+			}
+			var xhr = new XMLHttpRequest();
+			//xhr.withCredentials = true;
+			xhr.addEventListener("readystatechange", function () {
+				if (this.readyState === this.DONE) {
+					console.log(this.responseText);
+					var JsonObj = JSON.parse(this.responseText);
+					if(JsonObj.status==0) alert("注册成功，请登录");
+					else if(JsonObj.status==1001) alert("用户名已被使用");
+					else if(JsonObj.status==1002) alert("学号已绑定");
+					else if(JsonObj.status==1003) alert("教务处认证失败");
+					else
+						alert(JsonObj.status)
+				}
+			});
+			xhr.open("POST", "https://api.revth.com/auth/register2");
+			xhr.setRequestHeader("content-type", "application/json");
+			xhr.send(data);
+		}
+	</script>
+</html>

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin:0; padding 0;
+		}
+		body{
+			background: #B8CADB;			
+		}
+		#nothing{
+			width: 100%;
+			height: 110px;
+		}
+		#page{
+			text-align: center;
+			background-image:url(../image/背景图/游戏背景.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 60%;
+			height: 420px;
+		}
+		/* 左边两个按钮 */
+		.btn1{
+		        position: fixed;
+		        height:30px ;
+		        width:60px;
+		        border-width: 3px;
+		        border-radius: 5px;
+		        font-family: 微软雅黑;
+		        font-size: 15px;
+		        margin-left: 355px;
+		
+		}
+		/*退出按钮*/
+		#out{
+		    position: fixed;
+		    border-color:#a27e7e;
+		    border-style: solid;
+		    border-width: 2px;
+		    background-color:#ffead1;
+		    width:50px;
+		    height:25px;
+			line-height: 25px;
+		    border-radius: 2px;
+		    margin-top: 0px;
+		    margin-left: 1037px;
+		    -moz-box-shadow:3px 3px 5px #6b5858;
+		    -webkit-box-shadow:3px 3px 5px #6b5858;
+		    box-shadow:3px 3px 5px #6b5858;
+		
+		}
+		/* 前中后墩 */
+	    .dun{
+	        position: fixed;
+	        border-style: solid;
+	        border-width: 2px;
+	        border-radius: 3px;
+	        border-color: #AA8282;
+	        background-color: #ffead1;
+	        width:70px;
+	        height:40px;
+	        border-radius: 5px;
+			font-family:微软雅黑 ;
+	        font-size:20px;
+	        line-height:35px;
+	        text-align:center;
+	        color: #835858;
+	    }
+		/* 13张牌 */
+		#gc1{
+		    margin-top: 330px;
+		    margin-left: 320px;
+		}
+		#gc2{
+		    margin-top: 330px;
+		    margin-left: 375px;
+		}
+		#gc3{
+		    margin-top: 330px;
+		    margin-left: 430px;
+		}
+		#gc4{
+		    margin-top: 330px;
+		    margin-left: 485px;
+		}
+		#gc5{
+		    margin-top: 330px;
+		    margin-left: 540px;
+		}
+		#gc6{
+		    margin-top: 330px;
+		    margin-left: 595px;
+		}
+		#gc7{
+		    margin-top: 330px;
+		    margin-left: 650px;
+		}
+		#gc8{
+		    margin-top: 330px;
+		    margin-left: 705px;
+		}
+		#gc9{
+		    margin-top: 330px;
+		    margin-left: 760px;
+		}
+		#gc10{
+		    margin-top: 330px;
+		    margin-left: 815px;
+		}
+		#gc11{
+		    margin-top: 330px;
+		    margin-left: 870px;}
+		#gc12{
+		    margin-top: 330px;
+		    margin-left: 925px;
+		}
+		#gc13{
+		    margin-top: 330px;
+		    margin-left: 980px;
+		}
+		/* 13张牌牌面规格 */
+		.getcard{
+		    position: fixed;
+		    border-color: #835858;
+		    border-style: solid;
+		    border-width: 2px;
+		    background-color:none;
+		    width:45px;
+		    height: 70px;
+		    border-radius: 5px;
+		}
+		/* 前墩 */
+		#top1 {
+		    margin-top: 30px;
+		    margin-left: 560px;
+		}
+		
+		#top2{
+		    margin-top:30px ;
+		    margin-left: 630px;
+		}
+		#top3{
+		    margin-top:30px ;
+		    margin-left: 700px;
+		}
+		/* 牌面规格 */
+		.card{
+		    position: fixed;
+		    border-color: #835858;
+		    border-style: solid;
+		    border-width: 2px;
+		    background-color:none;
+		    width:57px;
+		    height: 85px;
+		    border-radius: 5px;
+		}
+		/* 中墩 */
+		#middle1 {
+		    margin-top: 130px;
+		    margin-left: 490px;
+		}
+		#middle2 {
+		    margin-top: 130px;
+		    margin-left: 560px;
+		}
+		#middle3{
+		    margin-top:130px ;
+		    margin-left: 630px;
+		}
+		#middle4{
+		    margin-top:130px ;
+		    margin-left: 700px;
+		}
+		#middle5{
+		    margin-top:130px ;
+		    margin-left: 770px;
+		}
+		/* 后墩 */
+		#buttom1 {
+		    margin-top: 230px;
+		    margin-left: 490px;
+		}
+		#buttom2 {
+		    margin-top: 230px;
+		    margin-left: 560px;
+		}
+		#buttom3{
+		    margin-top:230px ;
+		    margin-left: 630px;
+		}
+		#buttom4{
+		    margin-top:230px ;
+		    margin-left: 700px;
+		}
+		#buttom5{
+		    margin-top:230px ;
+		    margin-left: 770px;
+		}
+	</style>
+	<body>
+		<div id = "nothing"></div>
+		
+		<div id = "page">
+			<button id="start" class="btn1" style="background-color: #9c0007;border-color: #965458;color: #f0dcd2;margin-top: 230px;">
+				<b>开始</b>
+			</button>
+			
+			<button id="chupai" class="btn1" style="background-color: #ffead1;border-color: #d2bdaa;color: #926365;margin-top: 270px;">
+				<b>出牌</b>
+			</button>
+			
+			<div class="dun" style="margin-top: 50px;margin-left: 780px;"><b>前墩</b></div>
+			<div class="dun" style="margin-top: 150px;margin-left: 850px;"><b>中墩</b></div>
+			<div class="dun" style="margin-top: 250px;margin-left: 850px;"><b>后墩</b></div>
+			
+			<!--开启战局获得的牌-->
+			<div id="gc1" class="getcard"><img id="gcc1" height="70px" src=" "></div>
+			<div id="gc2" class="getcard"><img id="gcc2" height="70px" src=" "></div>
+			<div id="gc3" class="getcard"><img id="gcc3" height="70px" src=" "></div>
+			<div id="gc4" class="getcard"><img id="gcc4" height="70px" src=" "></div>
+			<div id="gc5" class="getcard"><img id="gcc5" height="70px" src=" "></div>
+			<div id="gc6" class="getcard"><img id="gcc6" height="70px" src=" "></div>
+			<div id="gc7" class="getcard"><img id="gcc7" height="70px" src=" "></div>
+			<div id="gc8" class="getcard"><img id="gcc8" height="70px" src=" "></div>
+			<div id="gc9" class="getcard"><img id="gcc9" height="70px" src=" "></div>
+			<div id="gc10" class="getcard"><img id="gcc10" height="70px" src=" "></div>
+			<div id="gc11" class="getcard"><img id="gcc11" height="70px" src=" "></div>
+			<div id="gc12" class="getcard"><img id="gcc12" height="70px" src=" "></div>
+			<div id="gc13" class="getcard"><img id="gcc13" height="70px" src=" "></div>
+			
+			<!--出牌以后的牌-->
+			<div id="top1" class="card"><img id="topp1" height="85px" src=" "></div>
+			<div id="top2" class="card"><img id="topp2" height="85px" src=" "></div>
+			<div id="top3" class="card"><img id="topp3" height="85px" src=" "></div>
+			<div id="middle1" class="card"><img id="topp4" height="85px" src=" "></div>
+			<div id="middle2" class="card"><img id="topp5" height="85px" src=" "></div>
+			<div id="middle3" class="card"><img id="topp6" height="85px" src=" "></div>
+			<div id="middle4" class="card"><img id="topp7" height="85px" src=" "></div>
+			<div id="middle5" class="card"><img id="topp8" height="85px" src=" "></div>
+			<div id="buttom1" class="card"><img id="topp9" height="85px" src=" "></div>
+			<div id="buttom2" class="card"><img id="topp10" height="85px" src=" "></div>
+			<div id="buttom3" class="card"><img id="topp11" height="85px" src=" "></div>
+			<div id="buttom4" class="card"><img id="topp12" height="85px" src=" "></div>
+			<div id="buttom5" class="card"><img id="topp13" height="85px" src=" "></div>
+			<!--退出按钮-->
+			<div id="out" >
+				<botton onclick="location.href='开始.html'">
+					<b>退出</b>
+			    </botton>
+			</div>
+		</div>
+		<div id = "nothing"></div>
+	</body>
+	<script type="text/javascript">
+			var token = localStorage.getItem("token");
+			
+			var id_1 = 0 ;
+			document.getElementById("start").onclick = function()//当点击开始按钮的时候
+			{
+				var data = null;
+		        var xhr = new XMLHttpRequest();
+		        maxn = 0
+		        xhr.addEventListener("readystatechange", function ()
+		        {
+		            if (this.readyState === this.DONE) 
+					{
+					    console.log(this.responseText);
+					    var JsonObject = JSON.parse(this.responseText);
+		
+					    if(JsonObject.status==1004) 
+						alert("Token过期");
+					    if(JsonObject.status==2001) 
+						alert("未结束战局过多");
+					    if (JsonObject.status == 0)
+					    {
+							id_1 = JsonObject.data.id;
+						    showCard(JsonObject.data.card,"gcc");
+							showCard("","topp");
+							
+							begin_1(JsonObject.data.card);
+		
+		                }
+						else if(JsonObject.status == 5000 )
+						{
+							alert("请重新注册并绑定教务处账号");
+						}
+					}
+		        });
+		
+		        xhr.open("POST", "https://api.revth.com/game/open");
+		        xhr.setRequestHeader("x-auth-token",token);
+		        xhr.send(data);
+			};
+			function showCard(Card,place)
+			{
+				if(Card == "")
+				{
+					for(var i=0;i<13;i++)
+					{
+						var s=document.getElementById(place+String(i+1));
+						match(s," ");
+					}
+				}
+				else
+				{
+					var cardSplit = Card.split(" ");
+					for(var i=0;i<13;i++)
+					{
+						var s=document.getElementById(place+String(i+1));
+						match(s,cardSplit[i]);
+					}
+				}
+			}
+		    function match(p,cardSplit)
+			{
+		        switch(cardSplit)
+				{
+				  case "#2":p.src="../image/扑克牌/方块2.png";break;
+		          case "#3":p.src="../image/扑克牌/方块3.png";break;
+		          case "#4":p.src="../image/扑克牌/方块4.png";break;
+		          case "#5":p.src="../image/扑克牌/方块5.png";break;
+		          case "#6":p.src="../image/扑克牌/方块6.png";break;
+		          case "#7":p.src="../image/扑克牌/方块7.png";break;
+		          case "#8":p.src="../image/扑克牌/方块8.png";break;
+		          case "#9":p.src="../image/扑克牌/方块9.png";break;
+		          case "#10":p.src="../image/扑克牌/方块10.png";break;
+		          case "#J":p.src="../image/扑克牌/方块j.png";break;
+		          case "#Q":p.src="../image/扑克牌/方块q.png";break;
+		          case "#K":p.src="../image/扑克牌/方块k.png";break;
+		          case "#A":p.src="../image/扑克牌/方块A.png";break;
+		          case "&2":p.src="../image/扑克牌/红桃2.png";break;
+		          case "&3":p.src="../image/扑克牌/红桃3.png";break;
+		          case "&4":p.src="../image/扑克牌/红桃4.png";break;
+		          case "&5":p.src="../image/扑克牌/红桃5.png";break;
+		          case "&6":p.src="../image/扑克牌/红桃6.png";break;
+		          case "&7":p.src="../image/扑克牌/红桃7.png";break;
+		          case "&8":p.src="../image/扑克牌/红桃8.png";break;
+		          case "&9":p.src="../image/扑克牌/红桃9.png";break;
+		          case "&10":p.src="../image/扑克牌/红桃10.png";break;
+		          case "&J":p.src="../image/扑克牌/红桃j.png";break;
+		          case "&Q":p.src="../image/扑克牌/红桃q.png";break;
+		          case "&K":p.src="../image/扑克牌/红桃k.png";break;
+		          case "&A":p.src="../image/扑克牌/红桃A.png";break;
+		          case "$2":p.src="../image/扑克牌/黑桃2.png";break;
+		          case "$3":p.src="../image/扑克牌/黑桃3.png";break;
+		          case "$4":p.src="../image/扑克牌/黑桃4.png";break;
+		          case "$5":p.src="../image/扑克牌/黑桃5.png";break;
+		          case "$6":p.src="../image/扑克牌/黑桃6.png";break;
+		          case "$7":p.src="../image/扑克牌/黑桃7.png";break;
+		          case "$8":p.src="../image/扑克牌/黑桃8.png";break;
+		          case "$9":p.src="../image/扑克牌/黑桃9.png";break;
+		          case "$10":p.src="../image/扑克牌/黑桃10.png";break;
+		          case "$J":p.src="../image/扑克牌/黑桃j.png";break;
+		          case "$Q":p.src="../image/扑克牌/黑桃q.png";break;
+		          case "$K":p.src="../image/扑克牌/黑桃k.png";break;
+		          case "$A":p.src="../image/扑克牌/黑桃A.png";break;
+		          case "*2":p.src="../image/扑克牌/梅花2.png";break;
+		          case "*3":p.src="../image/扑克牌/梅花3.png";break;
+		          case "*4":p.src="../image/扑克牌/梅花4.png";break;
+		          case "*5":p.src="../image/扑克牌/梅花5.png";break;
+		          case "*6":p.src="../image/扑克牌/梅花6.png";break;
+		          case "*7":p.src="../image/扑克牌/梅花7.png";break;
+		          case "*8":p.src="../image/扑克牌/梅花8.png";break;
+		          case "*9":p.src="../image/扑克牌/梅花9.png";break;
+		          case "*10":p.src="../image/扑克牌/梅花10.png";break;
+		          case "*J":p.src="../image/扑克牌/梅花j.png";break;
+		          case "*Q":p.src="../image/扑克牌/梅花q.png";break;
+		          case "*K":p.src="../image/扑克牌/梅花k.png";break;
+		          case "*A":p.src="../image/扑克牌/梅花A.png";break;
+				  case " ":p.src=" ";break;
+		        }
+		    }
+		
+		    //出牌
+			document.getElementById("chupai").onclick = function()//当点击出牌按钮时
+			{
+				var data = JSON.stringify({
+				"id":id_1,
+				"card":[qans1,qans2,qans3]
+				});
+		        var xhr = new XMLHttpRequest();
+				
+		        xhr.addEventListener("readystatechange", function () {
+		        if (this.readyState === this.DONE) {
+					console.log(this.responseText);
+					var JsonObject = JSON.parse(this.responseText);
+		            if(JsonObject.status==0)
+		            {
+		                showCard(qans1+" "+qans2+" "+qans3,"topp");
+		
+		                alert("出牌成功");
+		            }
+		
+		            else if(JsonObject.status==2003)alert("不合法墩牌");
+		            else if(JsonObject.status==2002)alert("出千");
+		            else if(JsonObject.status==2004)alert("战局不存在或已结束，请重新开始");
+		            else if(JsonObject.status==2005)alert("格式出错");
+					else
+					    alert(JsonObject.status);
+		            }
+		        });
+		
+		        xhr.open("POST", "https://api.revth.com/game/submit");
+		        xhr.setRequestHeader("x-auth-token",token);
+				xhr.setRequestHeader("content-type", "application/json");
+		        xhr.send(data);
+			}
+		
+		   
+		var used = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+		var pai = new Array();
+		var paise = new Array();
+		var duiyin = ['&','$','#','*'];
+		
+		var maxn = 0;
+		var qans1 = "";
+		var qans2 = "";
+		var qans3 = "";
+		
+		function lol(n,a,b) {
+		    var tt ="";
+		    for(var i = 0;i<n;i++)
+		    {
+		        if(i !== 0) tt+=" ";
+		        tt+=duiyin[b[i]];
+		
+		        switch (a[i]) {
+		            case 11:tt+="J";break;
+		            case 12:tt+="Q";break;
+		            case 13:tt+="K";break;
+		            case 14:tt+="A";break;
+		            default:tt+=String(a[i]);
+		        }
+		    }
+		    return tt;
+		}
+		
+		function score() {
+		    var a = [], b = [], c = [], d = [], e = [], f = [], i, j;
+		
+		    for (i = 0; i < 13; i++) {
+		        if (used[i] === 1) {
+		            a.push(pai[i]);
+		            b.push(paise[i]);
+		        } else if (used[i] === 0) {
+		            c.push(pai[i]);
+		            d.push(paise[i]);
+		        } else if (used[i] === 2) {
+		            e.push(pai[i]);
+		            f.push(paise[i]);
+		        }
+		    }
+		    for (j = 0; j < 2; j++)
+		        for (i = 0; i < 2 - j; i++)
+		            if (a[i] > a[i + 1]) {
+		                [a[i], a[i + 1]] = [a[i + 1], a[i]];
+		                [b[i], b[i + 1]] = [b[i + 1], b[i]];
+		            }
+		
+		
+		    for (j = 0; j < 4; j++)
+		        for (i = 0; i < 4 - j; i++) {
+		            if (c[i] > c[i + 1]) {
+		                [c[i], c[i + 1]] = [c[i + 1], c[i]];
+		                [d[i], d[i + 1]] = [d[i + 1], d[i]];
+		            }
+		            if (e[i] > e[i + 1]) {
+		                [e[i], e[i + 1]] = [e[i + 1], e[i]];
+		                [f[i], f[i + 1]] = [f[i + 1], f[i]];
+		            }
+		        }
+		    var ans1 = score1(a, b);
+		    var ans2 = score2(c, d);
+		    var ans3 = score2(e, f);
+		    if (ans1 < ans2 && ans2 < ans3 && ans1 + ans2 + ans3 > maxn)
+		    {
+		        maxn=ans1+ans2+ans3;
+		        qans1=lol(3,a,b);
+		        qans2=lol(5,c,d);
+		        qans3=lol(5,e,f);
+		    }
+		}
+		function score1(a,b) {
+		
+		    if(a[0]===a[1]&&a[1] === a[2])
+		        return 4+a[2]/100;
+		    if(a[0]===a[1]||a[1] === a[2])
+		        return 2+a[1]/100;
+		    return 1+a[2]/100;
+		}
+		function score2(a,b) {
+		    var i,node=1;
+		    var tt=0;
+		    for(i=0;i<5;i++)
+		        tt+=a[i];
+		    tt=tt/10000.0;
+		    for(i=0;i<4;i++)
+		        if(a[i]+1!==a[i+1]||b[i]!==b[i+1])
+		        node = 0;
+		    if(1 === node)
+		        return 13+a[4]/100;
+		    if((a[0]==a[1]&&a[1]==a[2]&&a[2]==a[3])||(a[3]==a[4]&&a[1]==a[2]&&a[2]==a[3]))
+		        return 11+a[3]/100;
+		    if((a[0]==a[1]&&a[1]==a[2]&&a[4]==a[3])||(a[3]==a[4]&&a[1]==a[0]&&a[2]==a[3]))
+		        return 9+a[2]/100;
+		    if(b[0]==b[1]&&b[1]==b[2]&&b[2]==b[3]&&b[3]==b[4])
+		        return 7+a[4]/100;
+		    if((a[0]+1==a[1])&&(a[1]+1==a[2])&&(a[4]==a[3]+1)&&(a[2]+1==a[3]))
+		        return 6+a[4]/100;
+		    if((a[0]==a[1]&&a[1]==a[2])||(a[2]==a[3]&&a[1]==a[2])||(a[3]==a[2]&&a[3]==a[4]))
+		        return 5+a[3]/100;
+		    if(((a[0]==a[1])&&(a[2]==a[3])&&(a[2]==a[1]+1))||((a[2]==a[1])&&(a[4]==a[3])&&(a[1]+1==a[3])))
+		        return 4+a[3]/100;
+		    if(((a[0]==a[1])&&(a[2]==a[3]))||((a[0]==a[1])&&(a[4]==a[3]))||((a[2]==a[1])&&(a[4]==a[3])))
+		        return 3+a[3]/100;
+		    for(i=0;i<4;i++)
+		    {
+		        if(a[i]==a[i+1])
+		            return 2+a[i]/100;
+		    }
+		    return 1+a[4]/100;
+		}
+		function find2(pos,n) {
+		    if(pos==13&&n==0)
+		    {
+		        score();
+		        return true;
+		    }
+		    if(pos==13)
+		        return false;
+		    while(used[pos]==1)
+		    {
+		        pos+=1;
+		        if(pos==13)
+		            return false;
+		    }
+		    if(n>0)
+		    {
+		        used[pos]=2;
+		        find2(pos+1,n-1);
+		        used[pos]=0;
+		    }
+		    find2(pos+1,n);
+		}
+		function find1(pos,n) {
+		    if(pos==13&&n==0)
+		    {
+		        find2(0,5);
+		        return true;
+		    }
+		    if(pos==13)
+		        return false;
+		    if(n>0)
+		    {
+		        used[pos]=1;
+		        find1(pos+1,n-1);
+		        used[pos]=0;
+		    }
+		    find1(pos+1,n);
+		}
+		function pre_deal(pii) {
+		    var paisp = pii.split(" ");
+			
+		    for (var i =0;i<13;i++)
+		    {
+		        switch (paisp[i][0]) {
+		            case '&':paise[i]=0;break;
+		            case '$':paise[i]=1;break;
+		            case '#':paise[i]=2;break;
+		            case '*':paise[i]=3;break;
+		        }
+		        switch (paisp[i][1]) {
+		            case '1':pai[i]=10;break;
+		            case 'J':pai[i]=11;break;
+		            case 'Q':pai[i]=12;break;
+		            case 'K':pai[i]=13;break;
+		            case 'A':pai[i]=14;break;
+		            default:pai[i]=Number(paisp[i][1]);
+		        }
+		    }
+			
+		}
+		
+		function begin_1(card_1) {
+		    pre_deal(card_1);
+			
+			find1(0,3);
+		
+		}
+	</script>
+</html>

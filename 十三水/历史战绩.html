@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin:0; padding 0;
+		}
+		body{
+			background: #B8CADB;			
+		}
+		#nothing{
+			width: 100%;
+			height: 110px;
+		}
+		#page{
+			text-align: center;
+			background-image:url(../image/背景图/游戏背景.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 60%;
+			height: 420px;
+		}
+		.table-c table{
+			border: 1px solid #FFFFFF;
+		}
+		.table-c table td{
+			border: 1px solid #FFFFFF;
+		}
+		/*退出按钮*/
+		#out{
+		    position: fixed;
+			border: 1px solid #FFFFFF;
+		    width:50px;
+		    height:20px;
+			line-height: 20px;
+		    margin-left: 1040px;
+		    float: left;
+		}
+	</style>
+	<body>
+		<div id = "nothing"></div>
+		
+		<div id = "page">
+			<div style="height: 100px;color: #FFFFFF;">
+				<div style="width:790px;font-size: 40px;font-family: 仿宋;line-height: 100px;text-align: right;float: left;">
+					历&nbsp;史&nbsp;战&nbsp;绩
+				</div>
+				<div id="out" >
+					<botton onclick="location.href='开始.html'">
+						<b>退出</b>
+				    </botton>
+				</div>
+			</div>
+			
+			<div>
+				<input placeholder="请输入查询玩家的ID" style="margin-left: 300px;height: 20px;float: left;">
+				<button onclick="location.href='历史战绩1.html'" style="float: left;height: 25px;"><b>查询</b></button>
+				<button style="float: right;height: 25px;margin-right: 300px;" onclick="lookfor_2()"><b>确定</b></button>
+				<input style="height: 20px;float: right;" placeholder="请输入查询页码">
+			</div>
+			
+			<div class="table-c" style="padding-left: 300px;padding-right: 300px;margin-top: 60px;">
+				<table cellspacing = "0" style="font-size: 20px;color: #FFFFFF;">
+					<tr align="center" style="height: 47px;">
+						<td align="center" style="width: 100px;">战局ID</td>
+						<td align="center" style="width: 400px;">玩家出牌情况</td>
+						<td align="center" style="width: 50px;">分数</td>
+						<td align="center" style="width: 200px;">结算时间</td>
+					</tr>
+					<tr align="center" style="height: 47px;">
+						<td id="one" id="one" align="center" style="width: 100px;"></td>
+						<td align="center" style="width: 400px;"></td>
+						<td align="center" style="width: 50px;"></td>
+						<td align="center" style="width: 200px;"></td>
+					</tr>
+					<tr align="center" style="height: 47px;">
+						<td id="two" id="two" align="center" style="width: 100px;"></td>
+						<td align="center" style="width: 400px;"></td>
+						<td align="center" style="width: 50px;"></td>
+						<td align="center" style="width: 200px;"></td>
+					</tr>
+					<tr align="center" style="height: 47px;">
+						<td id="three" id="three" align="center" style="width: 100px;"></td>
+						<td align="center" style="width: 400px;"></td>
+						<td align="center" style="width: 50px;"></td>
+						<td align="center" style="width: 200px;"></td>
+					</tr>
+					<tr align="center" style="height: 47px;">
+						<td id="four" align="center" style="width: 100px;"></td>
+						<td align="center" style="width: 400px;"></td>
+						<td align="center" style="width: 50px;"></td>
+						<td align="center" style="width: 200px;"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id = "nothing"></div>
+	</body>
+</html>
+

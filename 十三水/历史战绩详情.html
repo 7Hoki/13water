@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin:0; padding 0;
+		}
+		body{
+			background: #B8CADB;			
+		}
+		#nothing{
+			width: 100%;
+			height: 110px;
+		}
+		#page{
+			text-align: center;
+			background-image:url(../image/背景图/游戏背景.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 60%;
+			height: 420px;
+		}
+		.table-c table{
+			border: 1px solid #FFFFFF;
+		}
+		.table-c table td{
+			border: 1px solid #FFFFFF;
+		}
+		/*退出按钮*/
+		#out{
+		    position: fixed;
+			border: 1px solid #FFFFFF;
+		    width:50px;
+		    height:20px;
+			line-height: 20px;
+		    margin-left: 1040px;
+		    float: left;
+		}
+	</style>
+	<body>
+		<div id = "nothing"></div>
+		
+		<div id = "page">
+			<div style="height: 100px;color: #FFFFFF;">
+				<div style="width:790px;font-size: 40px;font-family: 仿宋;line-height: 100px;text-align: right;float: left;">
+					历&nbsp;史&nbsp;战&nbsp;绩
+				</div>
+				<div id="out" >
+					<botton onclick="location.href='开始.html'">
+						<b>退出</b>
+				    </botton>
+				</div>
+			</div>
+			
+			<div>
+				<input placeholder="" style="margin-left: 300px;height: 20px;float: left;">
+				<button style="float: left;height: 25px;" onclick="lookfor_1()"><b>查询</b></button>
+				<button style="float: right;height: 25px;margin-right: 300px;" onclick="lookfor_2()"><b>确定</b></button>
+				<input style="height: 20px;float: right;" placeholder="">
+			</div>
+			
+			<div class="table-c" style="padding-left: 300px;padding-right: 300px;margin-top: 60px;">
+				<table cellspacing = "0" style="font-size: 20px;color: #FFFFFF;">
+					<tr align="center" style="height: 50px;">
+						<td align="center" style="width: 125px;">play_id</td>
+						<td align="center" style="width: 125px;">name</td>
+						<td align="center" style="width: 125px;">score</td>
+						<td align="center" style="width: 125px;">前墩</td>
+						<td align="center" style="width: 125px;">中墩</td>
+						<td align="center" style="width: 125px;">后墩</td>
+					</tr>
+					<tr align="center" style="height: 50px;">
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+					</tr>
+					<tr align="center" style="height: 50px;">
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+					</tr>
+					<tr align="center" style="height: 50px;">
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+					</tr>
+					<tr align="center" style="height: 50px;">
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+						<td align="center" style="width: 125px;"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id = "nothing"></div>
+	</body>
+</html>
